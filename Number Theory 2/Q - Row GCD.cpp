@@ -8,9 +8,9 @@ signed main() {
 
     int n, m; cin >> n >> m;
     int a[n], b[n];
-    int g = 0;
     for (int i = 0; i < n; i++) cin >> a[i];
     sort(a, a + n);
+    int g = a[a[0]];
     for (int i = 1; i < n; i++) g = gcd(g, a[i] - a[0]);
     for (int i = 0; i < m; i++) {
         int x; cin >> x;
